@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - NEYVELI Portal</title>
+    <meta name="description" content="View beautiful real photos and galleries of Neyveli, showcasing local landmarks, parks, industries, government offices, transport hubs, and township life.">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .filter-btns {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 0.6rem 1.8rem;
+            border: 2px solid var(--primary-color);
+            background: transparent;
+            color: var(--primary-color);
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-color);
+            color: #fff;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90%; max-height: 90%; border: 4px solid #fff; border-radius: 4px; }
+        .close-lightbox {
+            position: absolute;
+            top: 20px; right: 30px;
+            color: #fff; font-size: 2.5rem; cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .close-lightbox:hover { color: var(--primary-color); }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="container">
+            <h1 class="section-title">Photo Gallery</h1>
+            <div class="filter-btns">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="landmarks">Landmarks</button>
+                <button class="filter-btn" data-filter="parks">Parks</button>
+                <button class="filter-btn" data-filter="industries">Industries</button>
+                <button class="filter-btn" data-filter="government">Government Buildings</button>
+                <button class="filter-btn" data-filter="transport">Transport</button>
+                <button class="filter-btn" data-filter="city">City Life</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="landmarks">
+                    <img src="images/neyveli-nlc-industry.jpg" alt="NLC India Limited Entrance Arch and Miner Statue in Neyveli" title="NLC Main Entrance Gate">
+                </div>
+                <div class="gallery-item" data-category="landmarks">
+                    <img src="images/neyveli-nataraja-temple.jpg" alt="Sri Nataraja Temple, Block 29, Neyveli" title="Sri Nataraja Temple">
+                </div>
+                <div class="gallery-item" data-category="landmarks">
+                    <img src="images/neyveli-veludayanpattu-murugan-temple.jpg" alt="Villudayanpattu Murugan Temple Deity Valli Deivanai Sametha Siva Subramania Swamy" title="Villudayanpattu Murugan Temple Deity">
+                </div>
+                <div class="gallery-item" data-category="parks">
+                    <img src="images/neyveli-tourist-place.jpg" alt="Pichavaram Mangrove Forests Near Neyveli" title="Pichavaram Mangrove Forests">
+                </div>
+                <div class="gallery-item" data-category="parks">
+                    <img src="images/neyveli-township-gardens.jpg" alt="Nehru Park Roundabout Garden in Neyveli" title="Nehru Park Township Gardens">
+                </div>
+                <div class="gallery-item" data-category="parks">
+                    <img src="images/neyveli-boat-house.jpg" alt="Neyveli Boat House Houseboat Boating in Lake Area" title="Neyveli Boat House">
+                </div>
+                <div class="gallery-item" data-category="parks">
+                    <img src="images/neyveli-childrens-park.jpg" alt="Children's Park Playground and Play Area in Neyveli" title="Neyveli Children's Park">
+                </div>
+                <div class="gallery-item" data-category="industries">
+                    <img src="images/industry.jpg" alt="NLC India Limited Lignite Mining Area" title="NLCIL Lignite Mining">
+                </div>
+                <div class="gallery-item" data-category="industries">
+                    <img src="images/neyveli-thermal-power-station.jpg" alt="Neyveli Lignite Thermal Power Station" title="Neyveli Thermal Power Station">
+                </div>
+                <div class="gallery-item" data-category="government">
+                    <img src="images/neyveli-township-administration.jpg" alt="Neyveli Township Administration Building (NLCIL Office)" title="Township Administration Office">
+                </div>
+                <div class="gallery-item" data-category="government">
+                    <img src="images/neyveli-hospital.jpg" alt="NLCIL General Hospital Neyveli" title="NLCIL General Hospital">
+                </div>
+                <div class="gallery-item" data-category="transport">
+                    <img src="images/railway-banner.jpg" alt="Neyveli Railway Station Transit Terminal" title="Neyveli Railway Station">
+                </div>
+                <div class="gallery-item" data-category="transport">
+                    <img src="images/bus-stand-banner.jpg" alt="Neyveli Bus Stand Transit Hub" title="Neyveli Bus Stand">
+                </div>
+                <div class="gallery-item" data-category="city">
+                    <img src="images/welcome-bg.jpg" alt="Lush Green Township Streets and Housing Blocks of Neyveli" title="Green Township Streets">
+                </div>
+                <div class="gallery-item" data-category="city">
+                    <img src="images/neyveli-dmart-shopping-center.jpg" alt="D-Mart Shopping Center in Neyveli" title="Shopping Center Complex">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close-lightbox" id="closeLightbox">&times;</span>
+        <img id="lightboxImg" src="" alt="Preview">
+    </div>
+
+    <footer></footer>
+    <script src="js/main.js"></script>
+    <script>
+        // Filtering
+        const btns = document.querySelectorAll('.filter-btn');
+        const items = document.querySelectorAll('.gallery-item');
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                btns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const filter = btn.getAttribute('data-filter');
+                items.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Lightbox
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const closeLightbox = document.getElementById('closeLightbox');
+        
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                const imgSrc = item.querySelector('img').src;
+                lightboxImg.src = imgSrc;
+                lightbox.classList.add('active');
+            });
+        });
+
+        closeLightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

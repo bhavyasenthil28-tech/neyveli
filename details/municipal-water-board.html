@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipal Water Board - Public Services - NEYVELI Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .detail-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        @media (min-width: 768px) {
+            .detail-container {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        .detail-gallery img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        .info-sidebar {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eaeaea;
+            height: fit-content;
+        }
+        .info-sidebar h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.25rem;
+        }
+        .info-item {
+            margin-bottom: 1.2rem;
+        }
+        .info-label {
+            font-weight: 700;
+            color: #555;
+            display: block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .info-val {
+            color: #222;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .full-description {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #333;
+        }
+        .full-description p {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> &raquo; <a href="../public-services.html">Public Services</a> &raquo; <span>Municipal Water Board</span>
+        </div>
+        <section class="container">
+            <h1 class="section-title" style="margin-bottom: 2rem;">Municipal Water Board</h1>
+            
+            <div class="detail-container">
+                <div>
+                    <div class="detail-gallery">
+                        <img src="../images/tn-water-board.jpg" alt="Municipal Water Board" class="main-img">
+                    </div>
+                    <div class="full-description">
+                        <p>The Municipal Water Board is a welfare board coordinating clean drinking water supply networks and drainage services across all blocks in Neyveli. It manages water distribution, quality testing, and pipeline infrastructure.</p>
+                    </div>
+                </div>
+                
+                <div class="info-sidebar">
+                    <h3>Quick Information</h3>
+                    <div class="info-item">
+                        <span class="info-label">Complete Address</span>
+                        <span class="info-val">Block 18 Water Works Depot, Neyveli, Tamil Nadu 607801</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Contact Details</span>
+                        <span class="info-val">Chief Engineer (Water): +91 4142 252333</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Timings & Hours</span>
+                        <span class="info-val">09:00 AM - 05:00 PM (Monday to Saturday)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Additional Information</span>
+                        <span class="info-val">Handles water connection requests and grievance redressal for water supply disruptions.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>

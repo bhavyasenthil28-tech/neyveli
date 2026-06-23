@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block 24 e-Seva Center - Public Services - NEYVELI Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .detail-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        @media (min-width: 768px) {
+            .detail-container {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        .detail-gallery img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        .info-sidebar {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eaeaea;
+            height: fit-content;
+        }
+        .info-sidebar h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.25rem;
+        }
+        .info-item {
+            margin-bottom: 1.2rem;
+        }
+        .info-label {
+            font-weight: 700;
+            color: #555;
+            display: block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .info-val {
+            color: #222;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .full-description {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #333;
+        }
+        .full-description p {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> &raquo; <a href="../public-services.html">Public Services</a> &raquo; <span>Block 24 e-Seva Center</span>
+        </div>
+        <section class="container">
+            <h1 class="section-title" style="margin-bottom: 2rem;">Block 24 e-Seva Center</h1>
+            
+            <div class="detail-container">
+                <div>
+                    <div class="detail-gallery">
+                        <img src="../images/tn-e-seva.jpg" alt="Block 24 e-Seva Center" class="main-img">
+                    </div>
+                    <div class="full-description">
+                        <p>This government portal facility offers Aadhaar enrollment, passport submission, birth and death registrations, and the issuance of various certificates (community, nativity, income) to the residents of Neyveli.</p>
+                    </div>
+                </div>
+                
+                <div class="info-sidebar">
+                    <h3>Quick Information</h3>
+                    <div class="info-item">
+                        <span class="info-label">Complete Address</span>
+                        <span class="info-val">Block 24, Commercial Complex, Neyveli, Tamil Nadu 607801</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Contact Details</span>
+                        <span class="info-val">Center Manager: +91 4142 252444</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Timings & Hours</span>
+                        <span class="info-val">09:30 AM - 06:00 PM (Monday to Saturday)</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Additional Information</span>
+                        <span class="info-val">Please bring original documents for verification. Services are provided at nominal government-prescribed fees.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
