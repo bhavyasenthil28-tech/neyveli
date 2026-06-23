@@ -1,7 +1,7 @@
 import os
 
 # Setup directory paths
-WORKSPACE_DIR = "/Users/bhavyasundari/Downloads/NEYVELI 2"
+WORKSPACE_DIR = "/Users/bhavyasundari/Downloads/NEYVELI"
 DETAILS_DIR = os.path.join(WORKSPACE_DIR, "details")
 os.makedirs(DETAILS_DIR, exist_ok=True)
 
@@ -1912,6 +1912,9 @@ DETAIL_TEMPLATE = """<!DOCTYPE html>
                     </div>
                 </div>
             </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="../{category_file}" class="btn-primary" style="text-transform: none;">← Back to {category_back_name}</a>
+            </div>
         </section>
     </main>
     <footer></footer>
@@ -1919,6 +1922,22 @@ DETAIL_TEMPLATE = """<!DOCTYPE html>
 </body>
 </html>
 """
+
+category_back_text_mapping = {
+    "temples.html": "Temples",
+    "marriage-halls.html": "Marriage Halls",
+    "mosques-dargahs.html": "Mosques & Dargahs",
+    "schools-colleges.html": "Schools & Colleges",
+    "hotels-restaurants.html": "Restaurants",
+    "petrol-bunks.html": "Petrol Pumps",
+    "medical-shops.html": "Medical Shops",
+    "churches.html": "Churches",
+    "tourist-places.html": "Tourist Places",
+    "government-offices.html": "Government Offices",
+    "hospitals.html": "Hospitals",
+    "transport-services.html": "Transport Services",
+    "public-services.html": "Public Services"
+}
 
 # Generate pages
 for cat_key, cat_data in categories.items():
@@ -1960,6 +1979,7 @@ for cat_key, cat_data in categories.items():
             name=item["name"],
             category_title=cat_data["title"],
             category_file=cat_data["file"],
+            category_back_name=category_back_text_mapping.get(cat_data["file"], cat_data["title"]),
             image=item["image"],
             full_desc=item["full_desc"],
             nearby_html=nearby_html,
