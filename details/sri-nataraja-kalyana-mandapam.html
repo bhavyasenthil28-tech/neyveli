@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Nataraja Kalyana Mandapam - Marriage Halls - NEYVELI Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .detail-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        @media (min-width: 768px) {
+            .detail-container {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        .detail-gallery img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        .info-sidebar {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eaeaea;
+            height: fit-content;
+        }
+        .info-sidebar h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.25rem;
+        }
+        .info-item {
+            margin-bottom: 1.2rem;
+        }
+        .info-label {
+            font-weight: 700;
+            color: #555;
+            display: block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .info-val {
+            color: #222;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .nearby-places {
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 12px;
+        }
+        .nearby-places h3 {
+            color: var(--dark-gray);
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+        }
+        .nearby-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .nearby-card {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 0.9rem;
+        }
+        .map-container {
+            margin-top: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            height: 250px;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .full-description {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #333;
+        }
+        .full-description p {
+            margin-bottom: 1rem;
+        }
+        .image-gallery-section {
+            margin-top: 3rem;
+        }
+        .image-gallery-section h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
+            height: 150px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .gallery-item img:hover {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> &raquo; <a href="../marriage-halls.html">Marriage Halls</a> &raquo; <span>Sri Nataraja Kalyana Mandapam</span>
+        </div>
+        <section class="container">
+            <h1 class="section-title" style="margin-bottom: 2rem;">Sri Nataraja Kalyana Mandapam</h1>
+            
+            <div class="detail-container">
+                <div>
+                    <div class="detail-gallery">
+                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc35953?auto=format&fit=crop&w=600&q=80" alt="Sri Nataraja Kalyana Mandapam" class="main-img">
+                    </div>
+                    <div class="full-description">
+                        <p>Located right next to the prominent Nataraja Temple in Block 29, this Kalyana Mandapam is the most preferred venue for traditional Hindu weddings. It provides all basic amenities, including a elevated stage, bride and groom rooms, and a traditional floor-seating dining hall. The proximity to the temple allows families to perform sacred ceremonies directly under temple blessings.</p>
+                    </div>
+                    
+                    
+                    
+                    <div class="nearby-places">
+                        <h3>Nearby Places to Explore</h3>
+                        <div class="nearby-grid">
+                            
+                            <div class="nearby-card">
+                                <strong>Sri Nataraja Temple</strong><br>
+                                <span style="color:#666;">Distance: 0.1 km</span>
+                            </div>
+                            <div class="nearby-card">
+                                <strong>Neyveli Central Mosque</strong><br>
+                                <span style="color:#666;">Distance: 0.6 km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-sidebar">
+                    <h3>Quick Information</h3>
+                    <div class="info-item">
+                        <span class="info-label">Complete Address</span>
+                        <span class="info-val">Block 29, Neyveli Township, Tamil Nadu 607807</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Contact Details</span>
+                        <span class="info-val">Temple Board Mandapam Office: +91 4142 228991</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Timings & Hours</span>
+                        <span class="info-val">Open for bookings</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Additional Information</span>
+                        <span class="info-val">Only vegetarian catering is permitted inside the premises due to its close proximity to the temple.</span>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.856980076722!2d79.467!3d11.61!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54d588523c91fb%3A0xc3175ebc088be330!2sSri%20Nataraja%20Kalyana%20Mandapam!5e0!3m2!1sen!2sin!4v1718614600000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
