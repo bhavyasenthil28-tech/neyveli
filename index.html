@@ -33,6 +33,30 @@
         .hero-slide.active {
             opacity: 1;
         }
+        .slider-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+            z-index: 3;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .dot:hover {
+            background: rgba(255, 255, 255, 0.8);
+        }
+        .dot.active {
+            background: #ffffff;
+            transform: scale(1.2);
+        }
         .hero-section::after {
             content: '';
             position: absolute;
@@ -81,6 +105,11 @@
                 <p style="font-size: 1.8rem; font-weight: 600; margin-top: -1rem; margin-bottom: 1rem; color: rgba(255,255,255,0.95); font-family: var(--heading-font);">The Land of Lignite and Power</p>
                 <p>Official information and services</p>
                 <a href="#about" class="btn-primary">Discover More</a>
+            </div>
+            <div class="slider-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
             </div>
         </section>
 
@@ -302,18 +331,54 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.dot');
             let currentSlide = 0;
+            let slideTimer;
             const slideInterval = 4000; // Change image every 4 seconds
+
+            function showSlide(index) {
+                if (slides.length === 0) return;
+                
+                // Remove active classes
+                slides[currentSlide].classList.remove('active');
+                if (dots.length > currentSlide) {
+                    dots[currentSlide].classList.remove('active');
+                }
+
+                currentSlide = index;
+
+                // Add active classes
+                slides[currentSlide].classList.add('active');
+                if (dots.length > currentSlide) {
+                    dots[currentSlide].classList.add('active');
+                }
+            }
 
             function nextSlide() {
                 if (slides.length === 0) return;
-                slides[currentSlide].classList.remove('active');
-                currentSlide = (currentSlide + 1) % slides.length;
-                slides[currentSlide].classList.add('active');
+                const nextIndex = (currentSlide + 1) % slides.length;
+                showSlide(nextIndex);
             }
 
+            function startTimer() {
+                slideTimer = setInterval(nextSlide, slideInterval);
+            }
+
+            function resetTimer() {
+                clearInterval(slideTimer);
+                startTimer();
+            }
+
+            // Click event listeners for dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                    resetTimer(); // Reset the auto-slide timer so it doesn't jump immediately after clicking
+                });
+            });
+
             if (slides.length > 0) {
-                setInterval(nextSlide, slideInterval);
+                startTimer();
             }
         });
     </script>
