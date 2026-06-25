@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chidambaram Nataraja Temple - Temples - NEYVELI Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .detail-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        @media (min-width: 768px) {
+            .detail-container {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        .detail-gallery img {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        .info-sidebar {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid #eaeaea;
+            height: fit-content;
+        }
+        .info-sidebar h3 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
+            font-size: 1.25rem;
+        }
+        .info-item {
+            margin-bottom: 1.2rem;
+        }
+        .info-label {
+            font-weight: 700;
+            color: #555;
+            display: block;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        .info-val {
+            color: #222;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .nearby-places {
+            margin-top: 2.5rem;
+            padding: 1.5rem;
+            background: var(--light-gray);
+            border-radius: 12px;
+        }
+        .nearby-places h3 {
+            color: var(--dark-gray);
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+        }
+        .nearby-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .nearby-card {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 0.9rem;
+        }
+        .map-container {
+            margin-top: 1.5rem;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            height: 250px;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .full-description {
+            line-height: 1.8;
+            font-size: 1.05rem;
+            color: #333;
+        }
+        .full-description p {
+            margin-bottom: 1rem;
+        }
+        .image-gallery-section {
+            margin-top: 3rem;
+        }
+        .image-gallery-section h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
+            height: 150px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .gallery-item img:hover {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> &raquo; <a href="../temples.html">Temples</a> &raquo; <span>Chidambaram Nataraja Temple</span>
+        </div>
+        <section class="container">
+            <h1 class="section-title" style="margin-bottom: 2rem;">Chidambaram Nataraja Temple</h1>
+            
+            <div class="detail-container">
+                <div>
+                    <div class="detail-gallery">
+                        <img src="../images/chidambaram-nataraja-temple.png" alt="Chidambaram Nataraja Temple" class="main-img">
+                    </div>
+                    <div class="full-description">
+                        <p>Chidambaram Nataraja Temple, also referred to as the Thillai Nataraja Temple, is a Hindu temple dedicated to Nataraja—Shiva as the lord of dance—located in Chidambaram, Tamil Nadu. It is one of the most celebrated shrines in South India, famed for its golden roofed sanctum and profound spiritual significance.</p>
+                    </div>
+                    
+                    <div class="nearby-places">
+                        <h3>Nearby Places to Explore</h3>
+                        <div class="nearby-grid">
+                            <div class="nearby-card">
+                                <strong>Pichavaram Mangrove Forests</strong><br>
+                                <span style="color:#666;">Distance: 15 km</span>
+                            </div>
+                            <div class="nearby-card">
+                                <strong>Neyveli Township</strong><br>
+                                <span style="color:#666;">Distance: 30 km</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="info-sidebar">
+                    <h3>Quick Information</h3>
+                    <div class="info-item">
+                        <span class="info-label">Complete Address</span>
+                        <span class="info-val">Sannathi St, Chidambaram, Tamil Nadu 608001</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Contact Details</span>
+                        <span class="info-val">Temple Administration Office: +91 4144 222265</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Timings & Hours</span>
+                        <span class="info-val">06:00 AM - 12:00 PM, 05:00 PM - 10:00 PM</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Additional Information</span>
+                        <span class="info-val">Traditional dress code is mandatory. Photography inside the inner temple sanctum is strictly prohibited.</span>
+                    </div>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4883493437533!2d79.691!3d11.399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a54c238b139fa4f%3A0x6e80b275bf87fcfd!2sThillai%20Nataraja%20Temple!5e0!3m2!1sen!2sin!4v1718612700000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="../temples.html" class="btn-primary" style="text-transform: none;">← Back to Temples</a>
+            </div>
+        </section>
+    </main>
+    <footer></footer>
+    <script src="../js/main.js"></script>
+</body>
+</html>
