@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Neyveli - neyveli.jbss.in</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>About Neyveli - NEYVELI Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about-section {
+            margin-bottom: 4rem;
+        }
+        .about-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 2.5rem;
+        }
+        .about-card h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.25rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 0.5rem;
+        }
+        .about-card p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .info-mini-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            transition: var(--transition);
+        }
+        .info-mini-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .info-mini-card h4 {
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            font-size: 1.2rem;
+        }
+        .info-mini-card p {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+        .attraction-section {
+            margin-top: 3rem;
+        }
+        .attraction-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        .attraction-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-sm);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .attraction-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        .attraction-content {
+            padding: 1.5rem;
+        }
+        .attraction-title {
+            font-size: 1.25rem;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+            font-weight: 700;
+        }
+        .attraction-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+    </style>
 </head>
 <body>
     <header></header>
@@ -13,32 +101,112 @@
         <div class="breadcrumb">
             <a href="index.html">Home</a> &raquo; <span>About Neyveli</span>
         </div>
-        <section class="container" style="max-width: 850px; text-align: center; padding: 4rem 1rem;">
-            <h1 class="section-title" style="display: inline-block; color: var(--primary-color); font-size: 3rem; margin-bottom: 1rem; letter-spacing: -0.5px;">About Neyveli</h1>
-            <p style="font-size: 1.25rem; color: var(--text-secondary); margin-bottom: 3rem;">Discover the historical, administrative, and cultural profile of the industrial township</p>
-            
-            <div style="margin-bottom: 3.5rem;">
-                <img src="images/neyveli-nataraja-temple.jpg" alt="Sri Nataraja Temple in Neyveli" style="width: 100%; max-height: 480px; object-fit: cover; border-radius: 16px; box-shadow: var(--shadow-lg); border: 1px solid var(--border-color);">
+        
+        <section class="container about-section">
+            <h1 class="section-title" style="margin-bottom: 1.5rem;">Neyveli – The Lignite City</h1>
+            <p style="font-size: 1.15rem; line-height: 1.8; color: var(--text-secondary); margin-bottom: 3rem;">
+                Neyveli is a beautifully planned and lush green industrial township located in the Cuddalore district of Tamil Nadu, India. Famed across the nation as the "Lignite City," it serves as the central hub of operations for NLC India Limited (formerly Neyveli Lignite Corporation). Renowned for its vast open-cast lignite mines and massive thermal power stations, Neyveli is a major contributor to the country's energy grid and stands as a model of successful industrial urban planning.
+            </p>
+
+            <!-- 2. Industrial Heritage & Growth -->
+            <div class="about-card">
+                <h2>Industrial Heritage & Growth</h2>
+                <p>
+                    The modern history of Neyveli began with the discovery of rich lignite deposits in the early 1930s. What started as an agricultural landscape transformed rapidly following the incorporation of Neyveli Lignite Corporation (NLC) in 1956, inaugurated by India's first Prime Minister, Pandit Jawaharlal Nehru. Over the decades, Neyveli has pioneered open-cast mining technology in India, employing massive Bucket Wheel Excavators. The mined lignite fuels multiple local thermal power stations, generating thousands of megawatts of electricity that power Tamil Nadu and the southern states, solidifying Neyveli's status as a critical economic engine.
+                </p>
             </div>
 
-            <div style="display: flex; flex-direction: column; gap: 2.5rem; text-align: left;">
-                <div style="background: var(--card-bg); padding: 2.25rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
-                    <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 1rem;">History of Neyveli</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">Neyveli is a major industrial city in the Cuddalore district of Tamil Nadu. Its history is deeply intertwined with the discovery of lignite resources in the region, which paved the way for the establishment of NLC India Limited (formerly Neyveli Lignite Corporation) in 1956. This transformation turned a small group of villages into a bustling, well-planned township.</p>
-                </div>
-                <div style="background: var(--card-bg); padding: 2.25rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
-                    <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 1rem;">Culture and Heritage</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">The culture of Neyveli is a beautiful blend of traditional Tamil heritage and a cosmopolitan lifestyle brought by people from various parts of India who settled here for employment. Festivals are celebrated with great fervor, reflecting the unity in diversity among the township's residents.</p>
-                </div>
-                <div style="background: var(--card-bg); padding: 2.25rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
-                    <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 1rem;">Importance of Neyveli</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">Neyveli holds significant importance for the state and the nation as a crucial hub for power generation. It helps fulfill a large portion of South India's electricity demands, acting as a backbone for industrial and domestic energy needs.</p>
-                </div>
-                <div style="background: var(--card-bg); padding: 2.25rem; border-radius: 16px; border: 1px solid var(--border-color); box-shadow: var(--shadow-sm);">
-                    <h3 style="font-size: 1.5rem; color: var(--primary-color); margin-bottom: 1rem;">Development and Growth</h3>
-                    <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">Over the decades, Neyveli has seen exponential development in terms of infrastructure, education, and healthcare. The township boasts excellent schools, modern hospitals, and well-maintained roads, making it one of the most organized and livable cities in the region.</p>
+            <!-- 3. Neyveli Township & Development -->
+            <div class="about-card">
+                <h2>Neyveli Township & Development</h2>
+                <p>
+                    Coinciding with the industrial growth, Neyveli Township was designed as a model grid-based residential layout. Divided into 32 distinct residential blocks, the township is celebrated for its abundant green canopy, parks, and wide, tree-lined avenues. It offers a self-sustaining ecosystem featuring top-tier educational institutions, well-equipped general hospitals, shopping complexes, recreational clubs, and sports facilities. The meticulous planning ensures that all residents enjoy easy access to clean civic services, local markets, and green open spaces, making it one of the most livable townships in the region.
+                </p>
+            </div>
+
+            <!-- 4. Township Administration & Services -->
+            <div style="margin-top: 3.5rem;">
+                <h2 class="section-title" style="margin-bottom: 2rem;">Township Administration & Services</h2>
+                <div class="info-cards">
+                    <div class="info-mini-card">
+                        <h4>NLC India Limited</h4>
+                        <p>A prestigious 'Navratna' public sector enterprise under the Ministry of Coal, spearheading lignite mining, thermal power generation, and green energy projects.</p>
+                    </div>
+                    <div class="info-mini-card">
+                        <h4>Neyveli Township Administration</h4>
+                        <p>Manages civic amenities, housing, roads, water supply, sewage systems, and maintains the extensive parks and green forest cover within the township.</p>
+                    </div>
+                    <div class="info-mini-card">
+                        <h4>Health Services</h4>
+                        <p>Centered around the NLCIL General Hospital along with community clinics, providing top-class medical care, occupational health support, and wellness programs.</p>
+                    </div>
+                    <div class="info-mini-card">
+                        <h4>Education & Training</h4>
+                        <p>Boasts a network of high-performing schools, technical institutes, and training centers that have established Neyveli as a premier educational hub.</p>
+                    </div>
                 </div>
             </div>
+
+            <!-- 5. Nearby Places -->
+            <div style="margin-top: 4rem;">
+                <h2 class="section-title" style="margin-bottom: 2rem;">Nearby Places</h2>
+                <div class="info-cards">
+                    <div class="info-mini-card">
+                        <h4>Vadalur</h4>
+                        <p>Located just 9 km away, Vadalur is a spiritual town famous for the Sathya Gnana Sabha founded by the saint Ramalinga Swamigal (Vallalar).</p>
+                    </div>
+                    <div class="info-mini-card">
+                        <h4>Panruti</h4>
+                        <p>Situated 18 km north of Neyveli, Panruti is renowned as the jackfruit capital of Tamil Nadu and is a major trading center for cashew nuts.</p>
+                    </div>
+                    <div class="info-mini-card">
+                        <h4>Cuddalore</h4>
+                        <p>The district headquarters located 43 km away, Cuddalore is an ancient port city known for its historic temples and scenic coastal areas.</p>
+                    </div>
+                    <div class="info-mini-card">
+                        <h4>Chidambaram</h4>
+                        <p>Located 30 km south, this legendary temple town is famous for the historic Thillai Nataraja Temple and is a hub for classical art and learning.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6. Nearby Major Attractions -->
+            <div class="attraction-section">
+                <h2 class="section-title" style="margin-bottom: 2rem;">Nearby Major Attractions</h2>
+                <div class="attraction-grid">
+                    <div class="attraction-card">
+                        <div class="attraction-content">
+                            <h4 class="attraction-title">Vadalur Vallalar Temple</h4>
+                            <p class="attraction-desc">The sacred Sathya Gnana Sabha, built in an octagonal structure, where the focus of worship is the Jyothi (Eternal Flame of Truth), attracting lakhs of devotees during Thaipusam.</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <div class="attraction-content">
+                            <h4 class="attraction-title">Chidambaram Nataraja Temple</h4>
+                            <p class="attraction-desc">A magnificent, ancient Dravidian temple dedicated to Lord Shiva as the cosmic dancer. It is famous for its golden roof, architectural marvels, and artistic significance.</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <div class="attraction-content">
+                            <h4 class="attraction-title">Pichavaram Mangrove Forest</h4>
+                            <p class="attraction-desc">One of the world's largest mangrove ecosystems, located near Chidambaram, offering scenic boat rides through a complex network of waterways, canals, and rich biodiverse islands.</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <div class="attraction-content">
+                            <h4 class="attraction-title">Silver Beach, Cuddalore</h4>
+                            <p class="attraction-desc">A pristine, sandy beach along the Bay of Bengal, famous for its long coastline, pleasant sea breezes, and recreational spots, making it a popular family destination.</p>
+                        </div>
+                    </div>
+                    <div class="attraction-card">
+                        <div class="attraction-content">
+                            <h4 class="attraction-title">Pondicherry</h4>
+                            <p class="attraction-desc">Located 60 km away, the former French colony is famous for its charming French Quarter streets, tranquil beaches, Auroville, and spiritual retreats like the Sri Aurobindo Ashram.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </section>
     </main>
     <footer></footer>
